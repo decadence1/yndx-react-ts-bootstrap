@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #eff2f7; /* Серый цвет фона */
+}
+
+.navbar-top {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Общий стиль для всех кнопок */
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 500 !important;
+  background-color: #eff2f7;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.navbar-logo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.logotext {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  padding-left: 8px;
+  font-weight: 600; /* Жирный шрифт */
+}
+.navbar-search {
+  border: none; /* Убираем рамку */
+  border-radius: 10px; /* Добавляем закругление углов, значение можно изменить */
+  padding: 10px; /* Добавляем небольшой внутренний отступ */
+  width: 228px;
+  height: 36px;
+  /* Растягиваем инпут на всю доступную ширину внутри контейнера */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Необязательно: добавляем лёгкую тень внутри поля для лучшей визуализации */
+}
+
+.dropdown {
+  padding: 8px;
+}
+
+.navbar-button-sort {
+  background-color: white;
+  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+}
+
+.navbar-button-sort,
+.navbar-button-create {
+  margin-left: 10px;
+}
+
+.navbar-dropdowns .dropdown-menu {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.navbar-dropdowns .dropdown-item {
+  color: black;
+}
+
+.navbar-dropdowns .btn-secondary {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  padding-right: 20px;
+  height: 36px;
+}
+
+.dropdown-toggle {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+}
+
+.navbar-dropdowns .dropdown-item + .dropdown-item {
+  margin-top: 5px;
+}
+
+.navbar-button-create {
+  background-color: #ffdc4c;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  width: 106px;
+  height: 36px;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+
+.navbar-bottom {
+  padding-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.navbar-bottom button {
+  width: 160px;
+  height: 50px;
+  padding: 0;
+  margin-bottom: 5px;
+  padding-left: 16px;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+.navbar-bottom hr {
+  width: 122px;
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #000;
+  margin-left: 18px;
+}
+
+.navbar-bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.button.active {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+button:not(.active) {
+  border: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-bottom button,
+  .navbar-bottom-left button {
+    width: calc(100% - 32px);
+    height: auto;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+
+  .navbar-bottom-left button {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+}
