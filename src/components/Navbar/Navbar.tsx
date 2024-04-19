@@ -8,13 +8,13 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onSelectStatus }) => {
-  const [activeButton, setActiveButton] = useState(""); // Состояние для хранения активной кнопки
+  const [activeButton, setActiveButton] = useState("");
 
   const handleButtonClick = (buttonName: string) => {
     if (activeButton === buttonName) {
-      setActiveButton(""); // Если кнопка уже активна, делаем ее неактивной
+      setActiveButton("");
     } else {
-      setActiveButton(buttonName); // Иначе делаем кнопку активной
+      setActiveButton(buttonName);
     }
   };
 
@@ -84,7 +84,6 @@ const Navbar: React.FC<NavbarProps> = ({ onSelectStatus }) => {
               <Dropdown.Item eventKey="all">Все статусы</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          {/* Add other dropdowns similarly */}
         </div>
         <button className="navbar-button-sort">
           <img src="icon.png" alt="s" />
@@ -141,7 +140,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSelectStatus }) => {
         >
           Отчёты
         </button>
-        {/* Add other buttons similarly */}
+
         <hr />
         <button
           className={activeButton === "reference" ? "active" : ""}

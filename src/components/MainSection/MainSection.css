@@ -1,88 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-/* Убедитесь, что у вас есть класс .container в MainSection.css */
 .container {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  margin-top: -870px; /* Устанавливаем отступ сверху */
+  margin-top: -870px;
   padding-right: 1500px;
-  /* overflow-x: auto; */
 }
 
 .container::-webkit-scrollbar {
-  height: 6px; /* Высота горизонтальной полосы прокрутки */
-  background-color: #f4f4f4; /* Цвет фона полосы прокрутки */
+  height: 6px;
+  background-color: #f4f4f4;
 }
 
 .container::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0; /* Цвет полосы прокрутки */
-  border-radius: 3px; /* Радиус закругления углов полосы прокрутки */
+  background-color: #c0c0c0;
+  border-radius: 3px;
 }
 
 .status-container {
   display: flex;
   align-items: center;
-  margin-top: 8px; /* Добавляем верхний отступ */
-  padding-left: 30px; /* Добавляем отступ слева для всех статусов */
+  margin-top: 8px;
+  padding-left: 30px;
 }
 
 .status-icon {
-  margin-right: 6px; /* Отступ между изображением статуса и текстом */
+  margin-right: 6px;
 }
 
 .additional-status-icon {
-  /* Делаем изображение круглым */
-  /* Устанавливаем прозрачную обводку */
-  /* background-color: #fed42b; */
   margin-left: 12px;
   margin-right: 6px;
 }
 
-/* Проверьте, что у вас есть класс .block в MainSection.css */
 .block {
-  background-color: #ffffff; /* Серый цвет фона */
+  background-color: #ffffff;
   cursor: pointer;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* добавляем box shadow */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin-bottom: 1px; /* промежуток между блоками */
-  width: 1680px; /* Изменяем ширину блока, чтобы он растягивался на всю доступную ширину */
+  margin-bottom: 1px;
+  width: 1680px;
 }
 
 .block:hover {
-  background-color: #eff2f7; /* Чуть серый цвет фона */
-}
-
-/* Убедитесь, что у вас есть класс .indicators в MainSection.css */
-.indicators {
-  display: flex; /* Используем flexbox */
-  flex-wrap: wrap; /* Разрешаем перенос строк */
-  gap: 16px; /* промежуток между элементами */
-}
-
-/* Убедитесь, что у вас есть класс .indicators div в MainSection.css */
-.indicators div {
-  font-size: 14px; /* размер шрифта */
-  white-space: nowrap; /* запрещаем перенос строк, чтобы текст не переносился */
-}
-
-/* Убедитесь, что у вас есть класс .card в MainSection.css */
-.card {
-  border: none !important; /* убираем рамку */
   background-color: #eff2f7;
 }
 
-/* Добавьте следующие стили в ваш файл MainSection.css */
+.indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.indicators div {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.card {
+  border: none !important;
+  background-color: #eff2f7;
+}
+
 .indicator-wrapper {
   display: flex;
   flex-direction: column;
-  margin-right: 16px; /* Отступ справа между элементами */
+  margin-right: 16px;
 }
 
 .indicator-name {
   margin-bottom: 8px;
-  font-weight: bold; /* Жирный шрифт */
-  width: 80px; /* Задаем фиксированную ширину для названий параметров */
+  font-weight: bold;
+  width: 80px;
 }
 
 .indicator-value {
@@ -90,56 +80,46 @@
 }
 
 input[type="checkbox"] {
-  /* Убираем стандартный внешний вид чекбокса */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* Задаем кастомный фон чекбокса */
+
   background-color: #fff;
   border: 1px solid #d9d9d9;
-  border-radius: 4px; /* Закругляем углы */
-  /* Задаем размеры чекбокса */
+  border-radius: 4px;
+
   width: 20px;
   height: 20px;
-  /* Устанавливаем позицию чекбокса */
+
   position: relative;
-  /* Добавляем отступ справа */
+
   margin-right: 10px;
-  /* Выравниваем по центру вертикально */
+
   vertical-align: middle;
-  /* Делаем курсор указателем при наведении */
+
   cursor: pointer;
 }
 
-/* Добавляем стили для метки чекбокса */
 label {
-  /* Устанавливаем вертикальное выравнивание по центру */
   vertical-align: middle;
 }
 
-/* Добавляем стили для отмеченного чекбокса */
 input[type="checkbox"]:checked {
-  background-color: #ffec43; /* Задаем цвет фона */
-  border-color: #afafaf; /* Задаем цвет рамки */
+  background-color: #ffec43;
+  border-color: #afafaf;
 }
 
-/* Стили для скрытия стандартного маркера чекбокса и отображения кастомного */
 input[type="checkbox"]::after {
-  /* Позиционируем кастомный маркер в центре чекбокса */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Устанавливаем размеры кастомного маркера */
   width: 10px;
   height: 10px;
-  /* Задаем цвет кастомного маркера */
   background-color: #fff;
-  /* Скрываем кастомный маркер при отмеченном чекбоксе */
   display: none;
 }
 
-/* При отмеченном чекбоксе отображаем кастомный маркер */
 input[type="checkbox"]:checked::after {
   display: block;
 }

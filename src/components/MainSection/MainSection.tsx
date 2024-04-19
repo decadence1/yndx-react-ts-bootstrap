@@ -6,7 +6,6 @@ interface MainSectionProps {
 }
 
 const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
-  // Создаем массивы данных для каждого элемента
   const indicatorsData: { [key: string]: string[] } = {
     OR: ["1.0", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0", "8.0", "9.0", "9.7"],
     OCR: ["1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5", "9.7"],
@@ -108,12 +107,10 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
     ],
   };
 
-  // Массив статусов для каждого ряда, кроме первого
   const statuses = ["Активная", "На паузе", "Закончена"];
-  // Массив ссылок на изображения для каждого статуса
+
   const statusImages = ["/active.png", "/pause.png", "/over.png"];
 
-  // Объект для соответствия дополнительного статуса и изображения
   const additionalStatusImages: { [key: string]: string } = {
     Афиша: "/af.png",
     Маркет: "/market.png",
@@ -122,15 +119,13 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
     Музыка: "/music.png",
   };
 
-  // Массивы возможных статусов для дополнительных статусов
   const additionalStatuses = Object.keys(additionalStatusImages);
 
-  // Фильтруем блоки в соответствии с выбранным статусом
   const filteredBlocks = [...Array(10)]
     .map((_, index) => ({
       index,
       status: statuses[index % 3],
-      // Случайный выбор дополнительных статусов и изображений для каждого блока
+
       additionalStatus:
         additionalStatuses[
           Math.floor(Math.random() * additionalStatuses.length)
@@ -149,14 +144,12 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
               <div className="block card-body" key={index}>
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
-                    {/* Всегда отображаем чекбокс */}
                     <input type="checkbox" id={`checkbox-${index}`} />
                     <label htmlFor={`checkbox-${index}`}>
                       {index === 0 ? "Кампании" : `Концерт Орлова `}
                     </label>
                   </div>
                   <div className="indicators">
-                    {/* Выводим название показателя в первом блоке */}
                     {Object.keys(indicatorsData).map((key) => (
                       <div className="indicator-wrapper" key={key}>
                         <div className="indicator-name">
@@ -169,7 +162,7 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
                     ))}
                   </div>
                 </div>
-                {/* Добавляем изображение и статус под каждым рядом, кроме первого */}
+
                 {index !== 0 && (
                   <div className="status-container">
                     <img
@@ -178,11 +171,11 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
                       className="status-icon"
                     />
                     <span>{statuses[index % 3]}</span>
-                    {/* Добавляем дополнительный статус и изображение */}
+
                     <img
                       src={additionalStatusImages[additionalStatus]}
-                      alt={additionalStatus} // Передаем альтернативный текст изображения
-                      className={`additional-status-icon ${additionalStatus}`} // Добавляем класс с именем альтернативного текста
+                      alt={additionalStatus}
+                      className={`additional-status-icon ${additionalStatus}`}
                     />
 
                     <span>{additionalStatus}</span>

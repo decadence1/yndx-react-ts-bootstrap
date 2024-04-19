@@ -3,7 +3,7 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  background-color: #eff2f7; /* Серый цвет фона */
+  background-color: #eff2f7;
 }
 
 .navbar-top {
@@ -14,7 +14,6 @@
   width: 100%;
 }
 
-/* Общий стиль для всех кнопок */
 button {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -35,16 +34,15 @@ button {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   padding-left: 8px;
-  font-weight: 600; /* Жирный шрифт */
+  font-weight: 600;
 }
 .navbar-search {
-  border: none; /* Убираем рамку */
-  border-radius: 10px; /* Добавляем закругление углов, значение можно изменить */
-  padding: 10px; /* Добавляем небольшой внутренний отступ */
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
   width: 228px;
   height: 36px;
-  /* Растягиваем инпут на всю доступную ширину внутри контейнера */
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Необязательно: добавляем лёгкую тень внутри поля для лучшей визуализации */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown {
