@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yndx-test-react-ts-bootstrap/static/css/main.6639324e.css",
+    "main.js": "/yndx-test-react-ts-bootstrap/static/js/main.8ff5eeff.js",
+    "static/js/453.28420078.chunk.js": "/yndx-test-react-ts-bootstrap/static/js/453.28420078.chunk.js",
+    "index.html": "/yndx-test-react-ts-bootstrap/index.html",
+    "main.6639324e.css.map": "/yndx-test-react-ts-bootstrap/static/css/main.6639324e.css.map",
+    "main.8ff5eeff.js.map": "/yndx-test-react-ts-bootstrap/static/js/main.8ff5eeff.js.map",
+    "453.28420078.chunk.js.map": "/yndx-test-react-ts-bootstrap/static/js/453.28420078.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6639324e.css",
+    "static/js/main.8ff5eeff.js"
+  ]
+}
