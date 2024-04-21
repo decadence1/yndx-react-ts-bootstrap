@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import "./Navbar.css";
+// @ts-ignore
+import Logo from "./logo.png";
+// @ts-ignore
+import Icon from "./icon.png";
 
 interface NavbarProps {
   onSelectStatus: (status: string) => void;
@@ -22,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSelectStatus }) => {
     <nav className="navbar">
       <div className="navbar-top">
         <div className="navbar-logo">
-          <img src="/logo.png" alt="s" />
+          <img src={Logo} alt="s" />
           <span className="logotext">Рассылки</span>
         </div>
         <input
@@ -86,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSelectStatus }) => {
           </Dropdown>
         </div>
         <button className="navbar-button-sort">
-          <img src="icon.png" alt="s" />
+          <img src={Icon} alt="s" />
         </button>
         <button className="navbar-button-create">Создать</button>
       </div>
