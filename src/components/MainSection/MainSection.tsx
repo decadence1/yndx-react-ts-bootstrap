@@ -1,5 +1,23 @@
 import React from "react";
 import "./MainSection.css";
+//@ts-ignore
+import Group from "./group.png";
+//@ts-ignore
+import Active from "./active.png";
+//@ts-ignore
+import Pause from "./pause.png";
+//@ts-ignore
+import Over from "./over.png";
+//@ts-ignore
+import Music from "./music.png";
+//@ts-ignore
+import Af from "./af.png";
+//@ts-ignore
+import Market from "./market.png";
+//@ts-ignore
+import Plus from "./plus.png";
+//@ts-ignore
+import Kino from "./kino.png";
 
 interface MainSectionProps {
   selectedStatus: string;
@@ -109,14 +127,14 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
 
   const statuses = ["Активная", "На паузе", "Закончена"];
 
-  const statusImages = ["/active.png", "/pause.png", "/over.png"];
+  const statusImages = [Active, Pause, Over];
 
   const additionalStatusImages: { [key: string]: string } = {
-    Афиша: "/af.png",
-    Маркет: "/market.png",
-    Плюс: "/plus.png",
-    Кинопоиск: "/kino.png",
-    Музыка: "/music.png",
+    Афиша: Af,
+    Маркет: Market,
+    Плюс: Plus,
+    Кинопоиск: Kino,
+    Музыка: Music,
   };
 
   const additionalStatuses = Object.keys(additionalStatusImages);
@@ -181,11 +199,7 @@ const MainSection: React.FC<MainSectionProps> = ({ selectedStatus }) => {
                     <span>{additionalStatus}</span>
                     {index !== 0 && (
                       <div className="additional-section">
-                        <img
-                          src="/group.png"
-                          alt="Group"
-                          className="group-image"
-                        />
+                        <img src={Group} alt="Group" className="group-image" />
                         <span className="group-text">121 092</span>
                       </div>
                     )}
