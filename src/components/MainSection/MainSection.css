@@ -6,6 +6,7 @@
   font-weight: 500;
   margin-top: -870px;
   padding-right: 1500px;
+  /* overflow-x: auto; */
 }
 
 .container::-webkit-scrollbar {
